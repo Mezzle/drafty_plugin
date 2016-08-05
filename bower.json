@@ -1,0 +1,21 @@
+{
+  "name": "drafty_plugin",
+  "authors": [
+    "Martin Meredith <martin@sourceguru.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "angular": "^1.5.8"
+  }
+}
