@@ -13,15 +13,15 @@
     <div class="team-container">
         <div class="team blue-team">
             <div ng-repeat="character in draft.blue" class="pick">{{character}}
-                <img src="/images/heroes/{{character}}.jpg"/>
+                <img src="{{getImage(character)}}"/>
             </div>
         </div>
     </div>
     <div class="vs">vs.</div>
     <div class="team-container">
         <div class="team red-team">
-            <div ng-repeat="character in draft.red" class="pick">{{character}}
-                <img src="/images/heroes/{{character}}.jpg"/></div>
+            <div ng-repeat="character in draft.red" class="pick">
+                <img src="{{getImage(character)}}"/>{{character}}</div>
         </div>
     </div>
 </div>

@@ -36,5 +36,23 @@ drafty.controller('draftCtrl', function ($scope, $http, $interval) {
         chrome.tabs.create({'url': chrome.extension.getURL('stream.html')});
     };
 
+    $scope.getImage = function(character) {
+        switch(character.toLowerCase())
+        {
+            case 'cho':
+            case 'gall':
+                return '/images/heroes/chogall.jpg';
+                break;
+            case 'butcher':
+                return '/images/heroes/the-butcher.jpg';
+            break;
+            case 'li li':
+                return '/images/heroes/lili.jpg';
+            default:
+                var imageName = character.replace('.', '').replace(' ', '-').replace('\'', '');
+                return '/images/heroes/' + imageName + '.jpg';
+        }
+    };
+
     $interval($scope.load, 5000);
 });

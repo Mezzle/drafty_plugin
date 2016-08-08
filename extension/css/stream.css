@@ -8,6 +8,7 @@ body {
     background-size: cover;
     color: white;
     font-family: Exo, sans-serif;
+    overflow: hidden;
 }
 
 div, body {
@@ -17,9 +18,11 @@ div, body {
 
 .teams {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 20px;
-    margin-top: 5%;
+    flex-basis: 30%;
+    //margin-top: 5%;
 }
 
 .vs {
@@ -27,12 +30,15 @@ div, body {
     text-align: center;
     text-transform: uppercase;
     font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .team-container {
-    flex: 5;
+    flex: 3;
     padding: 0;
     margin: 0;
+    width: 60%;
 }
 
 .team {
@@ -44,11 +50,12 @@ div, body {
 }
 
 .team.red-team {
-    flex-direction: row-reverse;
+    //flex-direction: row-reverse;
 }
 
 .team .pick {
     width: 20%;
+    margin: 10px;
     text-align: center;
     transition: all linear 0.5s;
     text-transform: uppercase;
@@ -59,6 +66,18 @@ div, body {
     height: auto;
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.team.red-team .pick img {
+    border-color: red;
+    box-shadow: 0 0 10px red;
+}
+
+.team.blue-team .pick img {
+    border-color: blue;
+    box-shadow: 0 0 10px cyan;
 }
 
 .team .pick.ng-enter {
