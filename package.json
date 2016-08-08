@@ -1,0 +1,27 @@
+{
+  "name": "drafty_plugin",
+  "version": "0.3",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^6.4.0",
+    "glob": "^7.0.5",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Mezzle/drafty_plugin.git"
+  },
+  "author": "Martin Meredith <martin@sourceguru.net>",
+  "license": "Commercial",
+  "bugs": {
+    "url": "https://github.com/Mezzle/drafty_plugin/issues"
+  },
+  "homepage": "https://github.com/Mezzle/drafty_plugin#readme"
+}
