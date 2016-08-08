@@ -1,6 +1,6 @@
-var drafty = angular.module("drafty", []);
+var drafty = angular.module("drafty", ['ngAnimate']);
 
-drafty.controller('draftCtrl', function ($scope, $http) {
+drafty.controller('draftCtrl', function ($scope, $http, $interval) {
 
     $scope.load = function () {
         $http.get('http://bot.do.mez.im:8080/hubot/draft/data')
@@ -25,5 +25,11 @@ drafty.controller('draftCtrl', function ($scope, $http) {
                 console.log(response.data);
                 $scope.load();
             });
-    }
+    };
+    
+    $scope.streamOverlay = function () {
+        chrome.tabs.create({'url': chrome.extension.getURL('stream.html')});
+    };
+    
+    $interval($scope.load, 5000);
 });
