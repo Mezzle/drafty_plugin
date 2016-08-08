@@ -19,6 +19,7 @@ div, body {
     display: flex;
     align-items: center;
     margin: 20px;
+    margin-top: 20%;
 }
 
 .vs {
@@ -43,7 +44,7 @@ div, body {
 }
 
 .team.red-team {
-    justify-content: flex-end;
+    flex-direction: row-reverse;
 }
 
 .team .pick {
@@ -52,6 +53,12 @@ div, body {
     transition: all linear 0.5s;
     text-transform: uppercase;
     font-size: 20px;
+}
+
+.team .pick img {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .team .pick.ng-enter {

@@ -9,13 +9,14 @@
 <body>
 
 <div ng-app="drafty" ng-controller="draftCtrl">
-    <h2>Red</h2>
-    <ul>
-        <li ng-repeat="character in draft.red">{{character}}</li>
-    </ul>
+
     <h2>Blue</h2>
     <ul>
         <li ng-repeat="character in draft.blue">{{character}}</li>
+    </ul>
+    <h2>Red</h2>
+    <ul>
+        <li ng-repeat="character in draft.red">{{character}}</li>
     </ul>
     <a ng-click="reset()">Reset</a>
     <a ng-click="next()">Next</a>
