@@ -12,8 +12,11 @@
 <div ng-app="drafty" ng-controller="draftCtrl" class="teams">
     <div class="team-container">
         <div class="team blue-team">
-            <div ng-repeat="character in draft.blue" class="pick">{{character}}
-                <img src="{{getImage(character)}}"/>
+            <div ng-repeat="character in draft.blue" class="pick">
+                {{character}}
+                <video muted loop autoplay>
+                    <source src="{{getVideo(character)}}" type="video/webm">
+                </video>
             </div>
         </div>
     </div>
@@ -21,7 +24,11 @@
     <div class="team-container">
         <div class="team red-team">
             <div ng-repeat="character in draft.red" class="pick">
-                <img src="{{getImage(character)}}"/>{{character}}</div>
+                <video muted loop autoplay>
+                    <source src="{{getVideo(character)}}" type="video/webm">
+                </video>
+                {{character}}
+            </div>
         </div>
     </div>
 </div>
