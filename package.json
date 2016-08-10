@@ -1,12 +1,13 @@
 {
   "name": "drafty_plugin",
-  "version": "0.4",
+  "version": "0.4.0",
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^6.4.0",
     "glob": "^7.0.5",
     "gulp": "^3.9.1",
+    "gulp-main-bower-files": "^1.5.2",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",

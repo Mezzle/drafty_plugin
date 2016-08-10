@@ -8,6 +8,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
+const bower = require('gulp-main-bower-files');
 
 const processors = [
     autoprefixer()
@@ -34,5 +35,11 @@ gulp.task('sass:watch', () => {
     return gulp.watch('extension/scss/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass']);
+gulp.task('bower', () => {
+    return gulp.src('./bower.json')
+        .pipe(bower())
+        .pipe(gulp.dest('extension/js/lib'));
+});
+
+gulp.task('default', ['sass', 'bower']);
 gulp.task('watch', ['sass:watch']);
