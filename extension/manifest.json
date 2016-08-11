@@ -8,7 +8,8 @@
         "default_icon" : "images/logo.png"
     },
     "permissions": [
-        "http://bot.do.mez.im:8080/"
+        "http://bot.do.mez.im:8080/",
+        "https://sentry.mez.im/"
     ],
     "background": {
         "scripts": [

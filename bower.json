@@ -17,6 +17,15 @@
   "dependencies": {
     "jquery": "^3.1.0",
     "angular": "^1.5.8",
-    "angular-animate": "~1.5.8"
+    "angular-animate": "~1.5.8",
+    "raven-js": "^3.4.0"
+  },
+  "overrides": {
+    "raven-js": {
+      "main": [
+        "dist/raven.js",
+        "dist/plugins/angular.js"
+      ]
+    }
   }
 }
