@@ -1,0 +1,25 @@
+@import 'bootstrap';
+
+@font-face {
+  font-family: Exo;
+  src: url(/fonts/Exo-Medium.ttf);
+}
+
+.team {
+  font-family: Exo, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+
+  &.blue h2 {
+    color: blue;
+  }
+
+  &.red h2 {
+    color: red;
+  }
+}
+
+.team ul {
+  height: 150px;
+  display: inline-block;
+}

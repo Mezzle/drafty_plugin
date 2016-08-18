@@ -15,6 +15,7 @@ const processors = [
 ];
 
 const sassOptions = {
+    includePaths: ['bower_components/bootstrap-sass/assets/stylesheets/'],
     outputStyle: 'nested',
     precision: 8
 };

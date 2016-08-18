@@ -3,7 +3,20 @@ var drafty = angular.module("drafty", ['ngAnimate'])
         '$compileProvider', function ($compileProvider) {
             $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension):/);
         }
-    ]);
+    ])
+    .directive('ngReallyClick', [function() {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs) {
+                element.bind('click', function() {
+                    var message = attrs.ngReallyMessage;
+                    if (message && confirm(message)) {
+                        scope.$apply(attrs.ngReallyClick);
+                    }
+                });
+            }
+        }
+    }]);
 
 drafty.controller('draftCtrl', function ($scope, $http, $interval) {
 
@@ -53,7 +66,7 @@ drafty.controller('draftCtrl', function ($scope, $http, $interval) {
             case 'li li':
                 return '/videos/lili.webm';
             default:
-                var imageName = character.replace('.', '').replace(' ', '-').replace(' ', '-').replace('\'', '');
+                var imageName = character.replace(/\./g, '').replace(/ +/g, '-').replace(/\'/, '');
                 return '/videos/' + imageName + '.webm';
         }
     };
