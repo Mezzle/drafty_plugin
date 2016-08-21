@@ -22,6 +22,12 @@ div, body, html {
     padding: 0;
 }
 
+.body-align {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 .teams {
     display: flex;
     flex-direction: column;
@@ -33,9 +39,12 @@ div, body, html {
         text-align: center;
         text-transform: uppercase;
         font-size: 60px;
-        margin: 5vh 0;
+        margin: 2.5vh 0;
         height: 10vh;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .team-container {
@@ -53,7 +62,6 @@ div, body, html {
 
             .pick {
                 width: 20%;
-                padding: 0 10px;
                 text-align: center;
                 transition: all linear 0.5s;
                 text-transform: uppercase;
@@ -66,13 +74,17 @@ div, body, html {
                     display: table;
                     clear: both;
                 }
-
-                video {
-                    border-radius: 10px;
-                    padding: 0;
-                    width: 100%;
-                    height: auto;
-                    flex-basis: auto;
+                
+                .wrapper-video {
+                    padding: 0 10px;
+                    
+                    video {
+                        border-radius: 10px;
+                        padding: 0;
+                        width: 100%;
+                        height: auto;
+                        flex-basis: auto;
+                    }
                 }
 
                 .character-name {
@@ -93,6 +105,13 @@ div, body, html {
 
                     &.ng-enter-active {
                         opacity: 1;
+                        
+                        .wrapper-video {
+                            video
+                            {
+                                animation: new-hero 1s ease-in-out;                                
+                            }
+                        }
                     }
                 }
             }
@@ -149,14 +168,13 @@ div, body, html {
     }
 }
 
-
 //TODO: Animations for new heroes when they've been added
-@keyframes new-hero-blue
+@keyframes new-hero
 {
-    
-}
-
-@keyframes new-hero-red
-{
-    
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px white, 0 0 70px white, 0 0 80px white, 0 0 100px white, 0 0 150px white;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px white, 0 0 35px white, 0 0 40px white, 0 0 50px white, 0 0 75px white;
+    }    
 }

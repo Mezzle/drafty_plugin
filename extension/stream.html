@@ -16,30 +16,34 @@
 	</script>
 </head>
 <body>
-
-<div ng-app="drafty" ng-controller="draftCtrl" class="teams">
-    <div class="team-container">
-        <div class="team blue-team">
-            <div ng-repeat="character in draft.blue" class="pick">
-                <div class="character-name"><p>{{character}}</p></div>
-                <video muted loop autoplay>
-                    <source src="{{getVideo(character)}}" type="video/webm">
-                </video>
+<div class="body-align">
+    <div ng-app="drafty" ng-controller="draftCtrl" class="teams">
+        <div class="team-container">
+            <div class="team blue-team">
+                <div ng-repeat="character in draft.blue" class="pick">
+                    <div class="character-name"><p>{{character}}</p></div>
+                    <div class="wrapper-video">
+                        <video muted loop autoplay>
+                            <source src="{{getVideo(character)}}" type="video/webm">
+                        </video>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="vs">versus</div>
-    <div class="team-container">
-        <div class="team red-team">
-            <div ng-repeat="character in draft.red" class="pick">
-                <video muted loop autoplay>
-                    <source src="{{getVideo(character)}}" type="video/webm">
-                </video>
-                <div class="character-name"><p>{{character}}</p></div>
+        <div class="vs">versus</div>
+        <div class="team-container">
+            <div class="team red-team">
+                <div ng-repeat="character in draft.red" class="pick">
+                    <div class="wrapper-video">
+                        <video muted loop autoplay>
+                            <source src="{{getVideo(character)}}" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="character-name"><p>{{character}}</p></div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 </body>
 </html>
