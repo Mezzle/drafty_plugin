@@ -7,6 +7,7 @@
 	<script src="/js/lib/raven-js/dist/plugins/angular.js"></script>
     <script src="/js/lib/jquery/dist/jquery.js"></script>
     <script src="/js/app.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
 	<script>
 		Raven
 			.config('https://22d6e3e2d64c43298b0a26a1efdf9c44@sentry.mez.im/5')
@@ -15,21 +16,20 @@
 	</script>
 </head>
 <body>
-
 <div ng-app="drafty" ng-controller="draftCtrl">
-
-    <h2>Blue</h2>
+    <h2 class="header__team-colour">Blue</h2>
     <ul>
         <li ng-repeat="character in draft.blue">{{character}}</li>
     </ul>
-    <h2>Red</h2>
+    <h2 class="header__team-colour">Red</h2>
     <ul>
         <li ng-repeat="character in draft.red">{{character}}</li>
     </ul>
-    <a ng-click="reset()">Reset</a>
-    <a ng-click="next()">Next</a>
-    <a ng-click="streamOverlay()">Open Overlay</a>
+    <div class="button-group">
+        <a class="button button-reset" ng-click="reset()">Reset</a>
+        <a class="button button-next" ng-click="next()">Next</a>
+        <a class="button button-open" ng-click="streamOverlay()">Open Overlay</a>
+    </div>
 </div>
-
 </body>
 </html>
