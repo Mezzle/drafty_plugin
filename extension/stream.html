@@ -20,7 +20,7 @@
 <div ng-app="drafty" ng-controller="draftCtrl" class="teams">
     <div class="team-container">
         <div class="team blue-team">
-            <div ng-repeat="character in draft.blue" class="pick magictime spaceInDown">
+            <div ng-repeat="character in draft.blue" class="pick magictime vanishIn">
                 {{character}}
                 <video muted loop autoplay>
                     <source src="{{getVideo(character)}}" type="video/webm">
@@ -31,7 +31,7 @@
     <div class="vs">vs.</div>
     <div class="team-container">
         <div class="team red-team">
-            <div ng-repeat="character in draft.red" class="pick magictime spaceInUp">
+            <div ng-repeat="character in draft.red" class="pick magictime vanishIn">
                 <video muted loop autoplay>
                     <source src="{{getVideo(character)}}" type="video/webm">
                 </video>
